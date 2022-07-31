@@ -53,6 +53,7 @@ const tictTacToe = (() => {
         scoreCard.textContent = "";
         clickedCells = [];
         marker = player_X.marker;
+        scoreCard.textContent = `Player ${marker.toUpperCase()} playing`;
     }
     restart.addEventListener("click", resetGame);
 
