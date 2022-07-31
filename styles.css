@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    color: #53BF9D;
+    font-family: 'Roboto', sans-serif;
+}
+.game-main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.game-main .first-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.game-main .first-screen h2 {
+    font-weight: 700;
+    font-size: 4rem;
+    margin: 32px;
+}
+.game-main .first-screen .play-btn {
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+    padding: 8px 32px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    border-radius: 32px;
+    transition: transform 0.3s ease;
+}
+.game-main .first-screen .play-btn:hover {
+    transform: scale(1.05);
+}
+.game-main .first-screen .play-btn img {
+    margin: 4px 0 0;
+}
+.game-main .board-hidden {
+    display: none;
+}
+.game-main .board-hidden.game-screen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 32px;
+}
+.game-main .game-screen h4 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2.5px;
+    text-transform: capitalize;
+}
+.game-main .game-screen .board {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template: repeat(3,  1fr) / repeat(3, 1fr) ;
+    gap: 10px;
+}
+
+.game-main .game-screen .board .cell {
+    border: 1px solid greenyellow;
+    background-color: rgb(38, 38, 38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #53BF9D;
+    font-size: 4rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease;
+}
+.game-main .game-screen .cell:hover {
+    transform: scale(1.1);
+}
+.game-main .game-screen .setting {
+    width: 300px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.game-main .game-screen .btn {
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+    transition: transform 0.3s ease;
+    background-color: #53BF9D;
+}
+.game-main .game-screen .btn:hover {
+    transform: scale(1.1);
+}
+.game-main .game-screen .back {
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #53BF9D;
+}
